@@ -59,27 +59,6 @@ Optimized for smartphones, tablets, and desktop devices.
 
 Designed as a starting point for SaaS products, subscription services, digital marketplaces, and membership platforms.
 
----
-
-## 📸 Screenshots
-
-### Subscription Plans
-
-![Pricing Page](screenshots/pricing-page.png)
-
-### Payment Processing
-
-![Payment Processing](screenshots/payment-processing.png)
-
-### Payment Success
-
-![Payment Success](screenshots/payment-success.png)
-
-### Mobile Experience
-
-![Mobile View](screenshots/mobile-view.png)
-
----
 
 ## 🎯 Use Cases
 
