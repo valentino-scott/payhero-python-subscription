@@ -1,97 +1,218 @@
-# PayHero Python Subscription: Full-Stack M-Pesa SaaS Boilerplate 🚀
+# 🚀 PayHero Python Subscription Boilerplate
 
-**A production-ready, open-source Python Flask application for integrating M-Pesa mobile payments using the PayHero API.**
-This project provides a complete SaaS subscription boilerplate featuring a beautiful responsive 3-tier pricing UI, real-time payment status polling, and asynchronous webhook callback handling.
+A production-ready Flask SaaS starter kit for integrating **M-Pesa payments via the PayHero API**.
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0%2B-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
-[![PayHero](https://img.shields.io/badge/PayHero-M--Pesa-green?style=for-the-badge&logo=mpesa)](https://payhero.co.ke/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+Build subscription platforms, membership sites, digital product stores, and SaaS applications with a complete payment workflow already implemented.
 
----
+This open-source project includes:
 
-## 📖 Table of Contents
-- [About The Project](#-about-the-project)
-- [Key Features](#-key-features)
-- [Built With](#-built-with)
-- [Live Demo](#-live-demo)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#-usage)
-  - [Environment Variables](#environment-variables)
-  - [Running the Application](#running-the-application)
-  - [Testing with Ngrok](#testing-with-ngrok)
-- [Project Structure](#-project-structure)
-- [SEO & Analytics](#-seo--analytics)
-- [Contributing](#-contributing)
-- [License](#-license)
+* Instant M-Pesa STK Push payments
+* Real-time transaction status updates
+* Secure webhook callback handling
+* Responsive subscription pricing interface
+* Environment-based configuration
+* Production-ready Flask architecture
+
+Perfect for developers and startups looking to launch M-Pesa-powered products quickly without spending days implementing payment infrastructure.
 
 ---
 
-## 📌 About The Project
+## ✨ Features
 
-This repository serves as a **complete boilerplate for any Kenyan developer or business** looking to accept M-Pesa payments instantly. 
+### 💳 M-Pesa STK Push Integration
 
-Most developers struggle with PayHero's authentication or handling asynchronous M-Pesa callbacks. This project solves that by providing a **zero-configuration starting point** that handles everything from the secure `.env` setup to real-time frontend updates when a user enters their PIN.
+Trigger payment requests directly to customer phones using the PayHero API and Safaricom M-Pesa.
 
-Whether you are selling digital products, subscriptions, or physical goods, this application can be deployed to production in under 10 minutes.
+### 📡 Webhook Callback Processing
 
----
+Receive and process payment confirmations asynchronously with secure Flask webhook endpoints.
 
-## ✨ Key Features
+### 🔄 Real-Time Payment Status Tracking
 
-- 💳 **Instant M-Pesa STK Push**: Utilizes PayHero's API to send payment prompts directly to mobile phones.
-- 🎨 **Modern 3-Tier Pricing UI**: Beautiful, responsive cards (Basic, Premium, Premium+) with interactive hover effects and selection logic.
-- 🔄 **Live Transaction Polling**: The frontend automatically checks the backend every 2 seconds. No page refresh required.
-- 📡 **Asynchronous Webhooks**: Fully configured Flask routes to handle real-time callbacks from PayHero (Success, Failure, Cancelled).
-- 📱 **Mobile-First Design**: Built with `Inter` fonts and Flexbox/Grid to look stunning on mobile devices and desktops.
-- 🔒 **Enterprise-Grade Security**: API keys are loaded using `python-dotenv`. The `.env` file is explicitly ignored by `.gitignore`.
+Automatic frontend polling keeps users informed of payment progress without refreshing the page.
 
----
+### 🎨 Modern Subscription UI
 
-## 🛠️ Built With
+Responsive pricing cards with support for multiple plans, plan selection, and mobile-friendly layouts.
 
-*   **[Python 3.8+](https://www.python.org/)** - The core backend programming language.
-*   **[Flask](https://flask.palletsprojects.com/)** - A lightweight WSGI web application framework.
-*   **[PayHero API](https://payhero.co.ke/)** - The gateway used to bridge Python with Safaricom M-Pesa.
-*   **[Ngrok](https://ngrok.com/)** - Used for tunneling localhost to the public internet for webhook testing.
-*   **[JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - Handles the DOM manipulation and live polling logic.
+### 🔒 Secure Configuration
 
----
+Sensitive credentials are managed through environment variables using `python-dotenv`.
 
-## 🖥️ Live Demo
+### 📱 Mobile-First Experience
 
-*(Insert a GIF screen recording here showing the 3 cards, selecting a plan, the payment popup on mobile, and the status box turning green).*
+Optimized for smartphones, tablets, and desktop devices.
 
-**Live URL:** *Pending deployment (See deployment guide below)*
+### ⚡ Production-Ready Foundation
+
+Well-structured Flask project suitable for SaaS products, subscription services, digital marketplaces, and membership platforms.
 
 ---
 
-## 🚀 Getting Started
+## 🛠 Technology Stack
 
-Follow these steps to get a local copy up and running on your machine.
+| Technology        | Purpose                   |
+| ----------------- | ------------------------- |
+| Python 3.8+       | Backend Development       |
+| Flask             | Web Framework             |
+| PayHero API       | M-Pesa Payment Processing |
+| JavaScript (ES6+) | Frontend Interactions     |
+| HTML/CSS          | User Interface            |
+| Ngrok             | Local Webhook Testing     |
 
-### Prerequisites
+---
 
-*   Python 3.8 or higher installed on your machine.
-*   An active **PayHero** merchant account (with API Username, Password, Account ID, and Channel ID).
-*   A **Ngrok** account (Free tier is sufficient for testing).
+## 🎯 Use Cases
 
-### Installation
+This boilerplate can be adapted for:
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/valentino-scott/payhero-python-subscription.git
-    cd payhero-python-subscription
-    ```
-2. **Create and activate a Python virtual environment**
+* SaaS subscriptions
+* Membership platforms
+* Online courses
+* Digital downloads
+* Premium content websites
+* E-commerce stores
+* Event ticketing systems
+* Donation platforms
 
-``` bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+---
+
+## 🚀 Quick Start
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/valentino-scott/payhero-python-subscription.git
+cd payhero-python-subscription
 ```
-3. **Install dependencies**
+
+### Create a Virtual Environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+API_USERNAME=your_payhero_username
+API_PASSWORD=your_payhero_password
+ACCOUNT_ID=your_account_id
+CHANNEL_ID=your_channel_id
+PUBLIC_URL=https://your-ngrok-url.ngrok-free.app
+```
+
+### Start the Application
+
+```bash
+python app.py
+```
+
+The application will be available at:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## 🧪 Testing M-Pesa Callbacks
+
+Because M-Pesa confirmations are asynchronous, PayHero requires a publicly accessible callback URL.
+
+Start Ngrok:
+
+```bash
+ngrok http 5000
+```
+
+Copy the generated HTTPS URL and update:
+
+```env
+PUBLIC_URL=https://your-ngrok-url.ngrok-free.app
+```
+
+Restart the Flask server and initiate a test payment.
+
+---
+
+## 📂 Project Structure
+
+```text
+payhero-python-subscription/
+│
+├── app.py
+├── .env
+├── .env.example
+├── .gitignore
+├── requirements.txt
+├── README.md
+│
+└── templates/
+    ├── index.html
+    └── success.html
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve the project:
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add amazing feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/amazing-feature
+```
+
+5. Open a Pull Request
+
+Please open an issue first for major changes so the proposal can be discussed.
+
+---
+
+## 📄 License
+
+Distributed under the MIT License.
+
+See the `LICENSE` file for more information.
+
+---
+
+## 👨‍💻 Author
+
+**Valentino Scott**
+
+GitHub: https://github.com/valentino-scott
+
+Repository:
+https://github.com/valentino-scott/payhero-python-subscription
+
+If this project helps you, consider giving it a ⭐ on GitHub.
